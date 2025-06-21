@@ -12,7 +12,9 @@ function App() {
   useEffect(() => {
     async function fetchItems() {
       try {
-        const response = await fetch(import.meta.env.VITE_BACKEND_URL+`/items`);
+        const response = await fetch(
+          import.meta.env.VITE_BACKEND_URL + `/items`
+        );
         if (!response.ok) throw new Error("Failed to fetch");
         const data = await response.json();
         // console.log(data);
@@ -27,11 +29,11 @@ function App() {
     fetchItems();
   }, [page]);
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800">
-      <header className="flex justify-center gap-8 py-6 bg-white shadow sticky top-0 z-10">
+    <div className="min-h-screen bg-gray-100 bg-gradient-to-r from-blue-600 to-violet-600">
+      <header className="flex justify-center gap-8 py-6 border-b-1 sticky top-0 z-10 text-white">
         <h1
           onClick={() => setPage("add")}
-          className={`text-xl font-semibold cursor-pointer hover:text-blue-600 transition ${
+          className={`text-xl font-bold cursor-pointer hover:text-blue-600 transition ${
             page === "add" ? "text-blue-600 underline underline-offset-4" : ""
           }`}
         >
@@ -39,7 +41,7 @@ function App() {
         </h1>
         <h1
           onClick={() => setPage("view")}
-          className={`text-xl font-semibold cursor-pointer hover:text-blue-600 transition ${
+          className={`text-xl font-bold cursor-pointer hover:text-blue-600 transition ${
             page === "view" ? "text-blue-600 underline underline-offset-4" : ""
           }`}
         >

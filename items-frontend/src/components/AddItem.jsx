@@ -71,7 +71,7 @@ function AddItem() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-gray-300"
           />
         </div>
 
@@ -85,7 +85,7 @@ function AddItem() {
             value={type}
             onChange={(e) => setType(e.target.value)}
             required
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-gray-300"
           />
         </div>
 
@@ -99,7 +99,7 @@ function AddItem() {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-gray-300"
           />
         </div>
 

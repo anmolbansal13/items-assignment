@@ -30,23 +30,27 @@ function App() {
   }, [page]);
   return (
     <div className="min-h-screen bg-gray-100 bg-gradient-to-r from-blue-600 to-violet-600">
-      <header className="flex justify-center gap-8 py-6 border-b-1 sticky top-0 z-10 text-white">
-        <h1
+      <header className="flex justify-center gap-8 py-6 border-b top-0 z-10 text-white">
+        <span
           onClick={() => setPage("add")}
-          className={`text-xl font-bold cursor-pointer hover:text-blue-600 transition ${
-            page === "add" ? "text-blue-600 underline underline-offset-4" : ""
+          className={`text-5xl font-bold cursor-pointer hover:text-gray-300 transition ${
+            page === "add" ? "" : ""
           }`}
         >
           ADD ITEMS
-        </h1>
-        <h1
+        </span>
+        <span
+        className="text-5xl font-bold">
+          |
+        </span>
+        <span
           onClick={() => setPage("view")}
-          className={`text-xl font-bold cursor-pointer hover:text-blue-600 transition ${
-            page === "view" ? "text-blue-600 underline underline-offset-4" : ""
+          className={`text-5xl font-bold cursor-pointer hover:text-gray-300 transition ${
+            page === "view" ? "" : ""
           }`}
         >
-          VIEW ITEMS
-        </h1>
+        VIEW ITEMS
+        </span>
       </header>
 
       <main className="max-w-4xl mx-auto px-4 py-8">
